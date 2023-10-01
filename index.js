@@ -1,25 +1,27 @@
-// TODO: Include packages needed for this application
+// Included packages needed for this application.
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
-
+// An array of questions for user input.
 inquirer.prompt([
     {
         type: "input",
-        message: "What is the URL to your GitHub profile?",
+        message: "What is the URL to your GitHub profile? [Required]",
         name: "github",
+        validate: urlValidation
     },
     {
         type: "input",
-        message: "What is your email?",
+        message: "What is your email? [Required]",
         name: "email",
+        validate: emailValidation
     },
     {
         type: "input",
-        message: "What is the title of your project? (Required)",
+        message: "What is the title of your project? [Required]",
         name: "title",
+        validate: inputValidation
     },
     {
         type: "editor",
@@ -50,7 +52,8 @@ inquirer.prompt([
             'GPL',
             'GPLv3',
             'MIT',
-            'PostgreSQL'
+            'PostgreSQL',
+            'None'
         ],
     },
     {
@@ -68,10 +71,39 @@ inquirer.prompt([
 
 ])
     .then((data) => {
-        console.log(data);
 
         fs.writeFile("README.md", generateMarkdown(data), (error) => {
             error ? console.log(error) : console.log("Success!");
         });
 
     });
+
+// Validation function for github url from user input (regex from https://regexr.com/3e6m0).
+function urlValidation(data) {
+
+    const urlPattern = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
+
+    if (!urlPattern.test(data)) {
+        return 'Please enter the required url!';
+    };
+    return true;
+};
+
+// Validation for required user input that is not a url or email.
+function inputValidation(data) {
+    if (!data) {
+        return 'Please enter the required information!';
+    };
+    return true;
+};
+
+// Validation for user email (regex from https://masteringjs.io/tutorials/fundamentals/email-regex).
+function emailValidation(data) {
+
+    const emailPattern = /(?:[a-z0-9+!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
+
+    if (!emailPattern.test(data)) {
+        return 'Please enter a valid email!';
+    };
+    return true;
+};
