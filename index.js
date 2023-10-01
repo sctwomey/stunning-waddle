@@ -53,7 +53,7 @@ inquirer.prompt([
             'GPLv3',
             'MIT',
             'PostgreSQL',
-            'None'
+            'No License'
         ],
     },
     {

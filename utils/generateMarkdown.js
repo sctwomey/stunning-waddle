@@ -2,8 +2,23 @@
 // Note: The starter functions were removed since no other functions are required to generate the structure for the README file with the use of a template literal.
 
 function generateMarkdown(data) {
+
+  let licenseBadge;
+  let licenseSelection;
+
+  if (data.license !== 'No License') {
+    licenseBadge = `![LicenseBadge](https://img.shields.io/badge/License-${data.license}-blue.svg)`
+
+    licenseSelection = `The project content in this repository is bound by the ${data.license} license.`
+  }
+
+  if (data.license === 'No License') {
+    licenseBadge = '';
+    licenseSelection = 'The project content in this repository is not bound by any license.';
+  };
+
   return `
-  # ${data.title} ![LicenseBadge](https://img.shields.io/badge/License-${data.license}-blue.svg)
+  # ${data.title} ${licenseBadge}
 
   ## Description
   ${data.description}
@@ -23,7 +38,7 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ### License
-  ${data.license}
+  ${licenseSelection}
   
   ### Contributing
   ${data.contributing}
