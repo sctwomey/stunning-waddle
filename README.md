@@ -5,6 +5,8 @@ This challenge requires the development of a command-line application that gener
 
 There will be a list of license choices for the user from a list of options, and once chosen, the license appears as a badge that is added near the top of the README.md with a notice that is added to the section of the README.md entitled License that explains which license the application is covered under. The user's GitHub username will be added to the section of the README.md entitled Questions, with a link to the user's GitHub profile. The user's email will be added to the section of the README.md entitled Questions, with instructions on how to reach the user with additional questions. When the links in the Table of Contents is clicked, the user will be taken to the corresponding section of the README.md.
 
+An image of the README example and video demonstration of the application are shown below.
+
 
 <img src="images/SampleREADME.PNG" alt="Sample README file Image" title="Sample README file Screenshot">
 
