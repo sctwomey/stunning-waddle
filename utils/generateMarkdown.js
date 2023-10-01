@@ -1,9 +1,9 @@
 // This function generates the markdown structure for the README file that is created after all of the questions are answered. 
-// Note: The starter functions were removed since no other functions are required to generate the structure for the README file.
+// Note: The starter functions were removed since no other functions are required to generate the structure for the README file with the use of a template literal.
 
 function generateMarkdown(data) {
-    return `
-    # ${data.title} ![License](https://img.shields.io/badge/License-${data.license}-blue.svg)
+  return `
+    # ${data.title} ![LicenseBadge](https://img.shields.io/badge/License-${data.license}-blue.svg)
 
   ## Description
     ${data.description}
@@ -17,22 +17,22 @@ function generateMarkdown(data) {
     - [Questions](#questions)
   
   
-  ### Installation
+  ## Installation
     ${data.installation}
   
-  ### Usage
+  ## Usage
     ${data.usage}
   
-  ### License
+  ## License
     ${data.license}
   
-  ### Contributing
+  ## Contributing
     ${data.contributing}
   
-  ### Tests
+  ## Tests
     ${data.tests}
   
-  ### Questions
+  ## Questions
     If there are any questions regarding this project, you may contact me at 
     ${data.email}, or by visiting ${data.github}.   
     `;

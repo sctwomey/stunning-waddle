@@ -1,21 +1,20 @@
-// Packages needed for this application.
-const fs = require('fs');
+// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// An array of questions for user input, and the write function for creating the README file.
+// TODO: Create an array of questions for user input
+
 inquirer.prompt([
     {
         type: "input",
-        message: "What is your GitHub profile username?",
+        message: "What is the URL to your GitHub profile?",
         name: "github",
-        default: "None"
     },
     {
         type: "input",
         message: "What is your email?",
         name: "email",
-        default: "None"
     },
     {
         type: "input",
@@ -45,13 +44,12 @@ inquirer.prompt([
         message: "Please choose a license for your project.",
         name: "license",
         choices: [
-            'AFL-3.0',
-            'APACHE-2.0',
-            'BSL-1.0',
+            'APACHE2.0',
             'CC',
-            'CC-BY-4.0',
+            'CC0v1',
+            'GPL',
+            'GPLv3',
             'MIT',
-            'MPL-2.0',
             'PostgreSQL'
         ],
     },
