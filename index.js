@@ -81,7 +81,7 @@ inquirer.prompt([
 // Validation function for github url from user input (regex from https://regexr.com/3e6m0).
 function urlValidation(data) {
 
-    const urlPattern = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
+    const urlPattern = new RegExp(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
 
     if (!urlPattern.test(data)) {
         return 'Please enter the required url!';
@@ -100,7 +100,7 @@ function inputValidation(data) {
 // Validation for user email being RFC 5322 compliant (regex from https://regex101.com/r/3uvtNl/1).
 function emailValidation(data) {
 
-    const emailPattern = /^((?:[A-Za-z0-9!#$%&'*+\-\/=?^_`{|}~]|(?<=^|\.)"|"(?=$|\.|@)|(?<=".*)[ .](?=.*")|(?<!\.)\.){1,64})(@)((?:[A-Za-z0-9.\-])*(?:[A-Za-z0-9])\.(?:[A-Za-z0-9]){2,})$/gm;
+    const emailPattern = new RegExp(/^((?:[A-Za-z0-9!#$%&'*+\-\/=?^_`{|}~]|(?<=^|\.)"|"(?=$|\.|@)|(?<=".*)[ .](?=.*")|(?<!\.)\.){1,64})(@)((?:[A-Za-z0-9.\-])*(?:[A-Za-z0-9])\.(?:[A-Za-z0-9]){2,})$/gm);
 
     if (!emailPattern.test(data)) {
         return 'Please enter a valid email!';
