@@ -8,8 +8,6 @@ There will be a list of license choices for the user from a list of options, and
 
 <img src="https://github.com/sctwomey/stunning-waddle/blob/main/SAMPLE.md" alt="Sample README file Image" title="Sample README file Screenshot">
 
-A video demonstration of the application can be found here: https://drive.google.com/file/d/1whZoX_SQQttLuUKJLFk2sTyxFcFugJ0u/view
-
 ## Installation
 
 The README generator is a command-line application.
