@@ -31,22 +31,22 @@ function generateMarkdown(data) {
   - [Tests](#tests)
   - [Questions](#questions)  
   
-  ### Installation
+  ## Installation
   ${data.installation}
   
-  ### Usage
+  ## Usage
   ${data.usage}
   
-  ### License
+  ## License
   ${licenseSelection}
   
-  ### Contributing
+  ## Contributing
   ${data.contributing}
   
-  ### Tests
+  ## Tests
   ${data.tests}
   
-  ### Questions
+  ## Questions
   If there are any questions regarding this project, you may contact me at 
   ${data.email}, or by visiting ${data.github}.   
   `;
