@@ -12,22 +12,22 @@
   - [Tests](#tests)
   - [Questions](#questions)  
   
-  ### Installation
+  ## Installation
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lorem mauris. Sed facilisis, risus a mollis porta, leo nulla pretium lectus, nec consectetur ex lacus at erat.
   
-  ### Usage
+  ## Usage
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lorem mauris. Sed facilisis, risus a mollis porta, leo nulla pretium lectus, nec consectetur ex lacus at erat.
   
-  ### License
+  ## License
   The project content in this repository is bound by the MIT license.
   
-  ### Contributing
+  ## Contributing
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lorem mauris. Sed facilisis, risus a mollis porta, leo nulla pretium lectus, nec consectetur ex lacus at erat.
   
-  ### Tests
+  ## Tests
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et lorem mauris. Sed facilisis, risus a mollis porta, leo nulla pretium lectus, nec consectetur ex lacus at erat. Phasellus convallis augue ut ipsum rhoncus lacinia. Nullam auctor ultrices dui eu faucibus. Pellentesque sit amet mauris nec magna molestie malesuada. Cras eleifend lobortis purus nec luctus. Mauris non ipsum at velit pulvinar luctus. Nunc lacinia neque vel tortor dignissim, sit amet placerat libero pellentesque.
   
-  ### Questions
+  ## Questions
   If there are any questions regarding this project, you may contact me at 
   samplereadme@gmail.com, or by visiting github.com/samplereadme.   
   
