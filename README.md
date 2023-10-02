@@ -10,7 +10,8 @@ An image of the README example and video demonstration of the application are sh
 
 <img src="images/SampleREADME.PNG" alt="Sample README file Image" title="Sample README file Screenshot">
 
-https://drive.google.com/file/d/18-nBbYd1FYGEvj88gI85GS3qZf0G79zs/view
+
+[ApplicationDemo.webm](https://github.com/sctwomey/stunning-waddle/assets/9093766/b0829594-cf61-41dd-a648-8849dcb3980f)
 
 
 ## Installation
